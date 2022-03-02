@@ -8,6 +8,6 @@ class Chef <ApplicationRecord
     
     dishes.joins(:ingredients, :ingredient_dishes)
           .select(ingredients.*)
-          .pluck("ingredients.name)
+          .pluck("ingredients.name")
   end
 end
