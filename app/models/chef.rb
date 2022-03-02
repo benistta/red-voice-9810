@@ -7,7 +7,7 @@ class Chef <ApplicationRecord
     # require "pry"; binding.pry
     
     dishes.joins(:ingredients, :ingredient_dishes)
-          .select("ingredients.name")
+          .select(ingredients.*)
          
   end
 end
