@@ -8,7 +8,6 @@ class Chef <ApplicationRecord
     
     dishes.joins(:ingredients, :ingredient_dishes)
           .select("ingredients.name")
-          .distinct
-          .pluck("ingredients.name")
+         
   end
 end
